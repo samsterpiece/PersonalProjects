@@ -5,16 +5,16 @@ import random
 
 def tryAgain():
     retryGame = input("You ran out of guesses. Try again?")
-    if retryGame == "yes" or "y":
+    if retryGame == "yes" or retryGame == "y":
         guessNumber()
-    elif retryGame == "no" or "n":
+    elif retryGame == "no" or retryGame == "n":
         exit
 
 def winGame():
     winGame = input("You won the game. Try again?")
-    if winGame == "y" or "yes":
+    if winGame == "y" or winGame =="yes":
             guessNumber()
-    elif winGame == "no" or "n":
+    elif winGame == "no" or winGame == "n":
             exit()
 
 
@@ -25,7 +25,7 @@ def guessNumber():
         #stores the number of guesses user has
         numGuesses = 4
         while numGuesses <= 4 and numGuesses >= 0:
-            userGuess = int(input("What is your guess?"))
+            userGuess = int(input("What is your guess?: "))
             if userGuess < randnumber:
                 print("Guess is too low!")
                 print("# Guesses left: " , numGuesses)
